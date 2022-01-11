@@ -4,15 +4,16 @@
 %define redhat_menus_version   5.0.1
 %define gnome_desktop3_version 3.1.91
 %define libgnomekbd_version    2.91.1
+%undefine _disable_source_fetch
 
 Name:		budgie-screensaver
 Version:	4.0
 Release:	2%{?dist}
 License:	GPLv2+
 Summary:	Budgie Screensaver
-URL:		https://github.com/getsolus/budgie-screensaver
+URL:		https://github.com/BuddiesOfBudgie/budgie-screensaver
 
-Source0:	https://github.com/getsolus/%{name}/releases/download/v%{version}/%{name}-v%{version}.tar.xz
+Source0:	%{url}/archive/refs/tags/v%{version}.tar.gz
 
 BuildRequires:	gtk3-devel => %{gtk3_version}
 BuildRequires:	dbus-devel >= %{dbus_version}
@@ -42,7 +43,7 @@ budgie-screensaver is a screen saver and locker that aims to have
 simple, sane, secure defaults and be well integrated with the desktop.
 
 %prep
-%autosetup -n %{name}-v%{version}
+%autosetup -n %{name}-%{version}
 autoreconf -f -i
 
 %build
