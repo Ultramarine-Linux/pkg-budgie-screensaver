@@ -8,7 +8,7 @@
 
 Name:		budgie-screensaver
 Version:	4.0
-Release:	2%{?dist}
+Release:	3%{?dist}
 License:	GPLv2+
 Summary:	Budgie Screensaver
 URL:		https://github.com/BuddiesOfBudgie/budgie-screensaver
@@ -66,6 +66,9 @@ rm -f %{buildroot}/%{_sysconfdir}/xdg/autostart/gnome-screensaver.desktop
 %doc %{_mandir}/man1/*.1.gz
 
 %changelog
+* Tue Feb 22 2022 Ultramarine Release Tracking Service - 4.0-3
+- Mass rebuild for release um36
+
 * Fri Apr 16 2021 Thomas Batten <stenstorpmc@gmail.com> - 3.6.1-28
 - Add patches 18 and 19 from upstream
 - Remove patch 200
