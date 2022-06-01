@@ -1,0 +1,6 @@
+[budgie-screensaver]
+spec = "budgie-screensaver.spec"
+build_script = ""
+build_method = "mock"
+owner = "your koji username"
+git_repo = "https://github.com/ultramarine-linux/budgie-screensaver"
